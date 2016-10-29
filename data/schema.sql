@@ -7,5 +7,5 @@ CREATE TABLE 'customer' (
 'customerName' VARCHAR(50) NOT NULL,
 'phoneNumber' TINYINT(10) NOT NULL,
 'isEating' BOOLEAN NOT NULL,
-PRIMARY KEY (`id`),
+PRIMARY KEY (`customerEmail`),
 );
