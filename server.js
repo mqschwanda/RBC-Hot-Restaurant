@@ -51,6 +51,17 @@ function getReservations(callback){
   })
 }
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/home.html'));
+});
+
+app.get('/tables', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/tables.html'));
+});
+
+app.get('/reserve', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/reserve.html'));
+});
 // Create a New Reservation - takes in JSON input
 app.post('/api/new', function(req, res){
   var newreservation = req.body;
