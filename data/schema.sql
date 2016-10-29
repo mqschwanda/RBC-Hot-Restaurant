@@ -7,6 +7,8 @@ CREATE TABLE 'customer' (
 'customerName' VARCHAR(50) NOT NULL,
 'phoneNumber' VARCHAR(10) NOT NULL,
 'isEating' BOOLEAN NOT NULL DEFAULT 0,
+'phoneNumber' TINYINT(10) NOT NULL,
+'isEating' BOOLEAN NOT NULL,
 PRIMARY KEY ('customerEmail')
 );
 
