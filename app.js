@@ -39,7 +39,7 @@ function getReservations(callback){
             this.isEating = isEating;
         }
           for (var i = 0; i < res.length; i++) {
-            var currentReservation = new Reservation(res[i].customerEmail, res[i].customerName, res[i].phoneNumber, res[i].isEating,);
+            var currentReservation = new Reservation(res[i].customerEmail, res[i].customerName, res[i].phoneNumber, res[i].isEating);
 
             reservations.push(currentReservation);
           }
@@ -50,6 +50,18 @@ function getReservations(callback){
     })
   })
 }
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/home.html'));
+});
+
+app.get('/tables', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/tables.html'));
+});
+
+app.get('/reserve', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/reserve.html'));
+});
 
 // Create a New Reservation - takes in JSON input
 app.post('/api/new', function(req, res){
