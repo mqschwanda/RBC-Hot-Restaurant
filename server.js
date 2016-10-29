@@ -39,7 +39,7 @@ function getReservations(callback){
             this.isEating = isEating;
         }
           for (var i = 0; i < res.length; i++) {
-            var currentReservation = new Reservation(res[i].customerEmail, res[i].customerName, res[i].phoneNumber, res[i].isEating,);
+            var currentReservation = new Reservation(res[i].customerEmail, res[i].customerName, res[i].phoneNumber, res[i].isEating);
 
             reservations.push(currentReservation);
           }

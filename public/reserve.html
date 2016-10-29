@@ -60,9 +60,10 @@
         customerEmail: $('#email').val().trim()
       };
 
-      $.post('http://localhost:3000/api/new', newCustomer)
+      $.post('/api/new', newCustomer)
         .done(function (data) {
           console.log(data);
+          alert('Your reservation was added!');
         });
 
       return false;
